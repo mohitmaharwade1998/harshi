@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+  name!: string;
+  name2:any;
+
+  constructor(private router:Router) {
+    console.log('constructor ');
+
+  }
+
+   abc() {
+    this.name = "harshita"
+  }
+
+  ngOnInit() {
+     this.abc()
+
+    this.name = 'mohit';
+
+  }
+
+  user(){
+    this.router.navigateByUrl('/user')
+  }
+ 
 }
