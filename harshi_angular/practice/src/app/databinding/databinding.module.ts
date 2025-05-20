@@ -3,16 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { DatabindingRoutingModule } from './databinding-routing.module';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 console.log('databinding')
 
 @NgModule({
   declarations: [
-    DatabindingComponent
+    DatabindingComponent  
+
   ],
   imports: [
     CommonModule,
-    DatabindingRoutingModule
+    DatabindingRoutingModule,
+    SharedModule
+
+
+   
   ]
 })
 export class DatabindingModule { 

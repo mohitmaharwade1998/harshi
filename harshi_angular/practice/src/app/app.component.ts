@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'practice';
   name!: string;
   name2:any;
+  data:any
 
   constructor(private router:Router) {
     console.log('constructor ');

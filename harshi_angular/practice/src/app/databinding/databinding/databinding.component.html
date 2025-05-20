@@ -1,2 +1,43 @@
 <p>databinding works!</p>
 
+<!-- data binding 
+1- one-way databinding (interpolation,property binding,event binding)
+2 - two-way databinding -->
+
+{{name}} <br>
+{{no==10}} <br>
+<!-- {{no=12}} not assign new value -->
+<!-- {{no++}}  -->
+
+<!-- event binding (click,keyup,blue) -->
+
+<input type="text" #inputvalue >
+<button (click)="data(inputvalue.value)">click</button> <br>
+
+<input type="text" #input (keyup)="data1(input.value)"> <br>
+
+<input type="text"  (keyup)="data2($event)">
+<input type="text"  (keyup)="data3($event.target)"> <br>
+
+<!-- property binding -->
+
+ <input type="text" value="mohit"> <br>
+ <input type="text" [value]="name"> <br>
+ <input type="text" disabled> <br>
+ <input [type]="value ? 'password':'string'" placeholder="..."> <br>
+
+ <input type="text" disabled="{{disablePoropert}}"> <br>
+ <input type="text" [disabled]="disablePoropert"> <br> <br>
+ 
+ <!-- two way binding -->
+
+ <input type="text" [(ngModel)]="twowayDatabinding"> <br>
+value:  {{twowayDatabinding}}  <br>
+
+checkbox1 -<input type="checkbox" value="harshita" (change)="checkbox1($event)">
+
+
+
+<div (mouseover)="myEvent()" style="color: blueviolet;" >
+    hey gtgjjj ghb ...
+</div>
